@@ -1,0 +1,162 @@
+  *, *::before, *::after{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+
+  header{
+    width: 100%;
+    background: rgb(29, 19, 19);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px 20px;
+    border-radius: 10px;
+    position: relative;
+  }
+  .logo,nav ul li a, label{
+    color: aliceblue;
+  }
+  label{
+    display: none;
+  }
+  nav ul{
+    display: flex;
+    gap: 1rem;
+  }
+  nav ul li{
+    list-style: none;
+  }
+  nav ul li a{
+    text-decoration: none;
+  }
+  @media screen and (max-width: 480px){
+    label{
+      display: block;
+    }
+    nav{
+      width: 150px;
+      position: absolute;
+      background: #fff;
+      top: 10px;
+      right: 10px;
+      padding: 10px;
+      border-radius: 5px;
+      visibility: hidden;
+      opacity: 0;
+      transition: .3s ease;
+    }
+    nav ul li a nav label{
+      color: #111;
+    }
+    nav label{
+      text-align: right;
+    }
+    nav ul{
+      flex-direction: column;
+    }
+    input:checked ~ nav{
+      visibility: visible;
+      opacity: 1;
+    }
+  }
+  .box1{
+   position:relative;
+    flex-direction: column;
+    right: auto;
+    width: 50%;
+    width: 50%;
+  }
+  .box1{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 140px;
+    height: 80px;
+    margin: 1px 6px;
+border: 1.8px solid rebeccapurple;
+animation: border-animation 3s infinite;
+top: 120px;
+box-shadow:10px 10px 6px rgb(105, 67, 67);
+  }
+  @keyframes border-animation{
+    0%{
+      border-color: rgb(6, 88, 54);
+    }
+    33%{
+      border-color: yellowgreen;
+    }
+    66%{
+      border-color: rgb(126, 233, 237);
+    }
+    100%{
+      border-color: blue;
+    }
+  }
+  .container{
+    flex-wrap: wrap;
+  }
+  h2{
+    border: #d08eb5;
+
+    padding: 4em 1em;
+    color: #cf298d;
+  }
+
+button:hover{
+  color: var(--btn-color);
+  background-color: var(--glow-color);
+  box-shadow: 0 0 1em .25em var(--glow-color),
+    0 0 4em 2em var(--glow-spread-color),
+    inset 0 0 .75em .25em var(--glow-color);
+}
+button:active{
+   
+  box-shadow: 0 0 0 .6em .25em var(--glow-color),
+    0 0 2.5em 2em var(--glow-spread-color),
+    inset 0 0 .5em 25em var(--glow-color);
+}
+.container{
+  display: flex;
+}
+
+.card{
+  height: 200px;
+  background-color: #cf298d;
+  flex: 1;
+  transition: 0.3s;
+ margin: 0 5px; 
+}
+.card:hover{
+  flex: 5;
+  background-color: rgb(87, 197, 201);
+}
+a{
+  text-decoration: none;
+  color:black;
+}
+ul{
+  float:right
+} 
+.mybutton{
+  border: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  background-color: #cf298d;
+  color:#fff;
+  cursor: pointer;
+  animation-name:meme;
+  animation-duration: 1s;
+  animation-iteration-count: infinite;
+}
+@keyframes meme{
+  0%{
+    transform: scale(1);
+  }
+  50%{
+    transform: scale(1.05);
+  }
+  100%{
+    transform: scale(1);
+  }
+}
